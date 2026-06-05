@@ -114,38 +114,3 @@ h1 {
         flex-wrap: wrap;
     }
 }
-.actions {
-    display: flex;
-    gap: 8px;
-}
-
-.delete-btn {
-    border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.2s ease;
-    background: #dc3545;
-    color: white;
-}
-
-.delete-btn:hover {
-    opacity: 0.9;
-}
-
-@media (max-width: 600px) {
-    .todo-input {
-        flex-direction: column;
-    }
-    .todo-input button {
-        width: 100%;
-    }
-    .task {
-        flex-wrap: wrap;
-    }
-    .actions {
-        width: 100%;
-        justify-content: flex-end;
-    }
-}

@@ -5,36 +5,20 @@ const taskList = document.getElementById("taskList");
 function createTask(taskText) {
     const li = document.createElement("li");
     li.classList.add("task");
-
+    
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-
+    
     const span = document.createElement("span");
     span.classList.add("task-text");
     span.textContent = taskText;
-
+    
     checkbox.addEventListener("change", () => {
         span.classList.toggle("completed", checkbox.checked);
     });
-
-    // --- PART 2 REPLACEMENT START ---
-    const actions = document.createElement("div");
-    actions.classList.add("actions");
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("delete-btn");
     
-    deleteBtn.addEventListener("click", () => {
-        li.remove();
-    });
-
-    actions.appendChild(deleteBtn);
     li.appendChild(checkbox);
     li.appendChild(span);
-    li.appendChild(actions);
-    // --- PART 2 REPLACEMENT END ---
-    
     taskList.appendChild(li);
 }
 
